@@ -22,7 +22,6 @@ public class ICUsystem {
         for (int i=0;i<=100;i++){
         Thread.sleep(30);
         form.percent.setText(Integer.toString(i)+"%");
-        if(i ==79){Thread.sleep(500);}
         if (i == 100){
         form.setVisible(false);
         main.setVisible(true);
@@ -36,8 +35,9 @@ public class ICUsystem {
     
     public static Connection getconnection(){
      
-        try{           
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lnh?autoReconnect=true&useSSL=false","root","12345678");
+        try{ 
+            System.out.println("Connected");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lnh?autoReconnect=true&useSSL=false","root","goodman997");
             return conn;
         }
         catch(SQLException e){

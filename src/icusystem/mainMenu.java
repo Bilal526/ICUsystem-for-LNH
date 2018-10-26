@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class mainMenu extends javax.swing.JFrame {
     
 Connection conn = null;
-PreparedStatement pst = null;
+PreparedStatement pst,pst1 = null;
 
 PlaceHolder p1,p2,p3,p4,p5,p6;
 int dayCount = 0;
@@ -81,9 +81,7 @@ int dayCount = 0;
         exit = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         hospitalNo = new javax.swing.JTextField();
-        doaHospital = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        doaIcu = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         timeAdmission = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -104,42 +102,37 @@ int dayCount = 0;
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Admittedtype = new javax.swing.JList();
+        jlistAdmittedtype = new javax.swing.JList();
         jScrollPane2 = new javax.swing.JScrollPane();
-        comorbids = new javax.swing.JList();
+        jlistComorbids = new javax.swing.JList();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         diagnosisPrimary = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         diagnosisSecondary = new javax.swing.JTextArea();
         jScrollPane5 = new javax.swing.JScrollPane();
-        diagnosisPrimary1 = new javax.swing.JTextArea();
+        surgery = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        dateSurgery = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        diagnosisPrimary2 = new javax.swing.JTextArea();
+        redoSurgery = new javax.swing.JTextArea();
         jLabel15 = new javax.swing.JLabel();
-        dateSurgery1 = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         icuOutcome = new javax.swing.JComboBox();
         jLabel25 = new javax.swing.JLabel();
-        dischargeDate = new javax.swing.JTextField();
-        dischargeDate1 = new javax.swing.JTextField();
+        los = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        sex1 = new javax.swing.JComboBox();
+        lifeTherapy = new javax.swing.JComboBox();
         jLabel16 = new javax.swing.JLabel();
         reasonWithdrawn = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        reasonWithdrawn1 = new javax.swing.JTextField();
+        reasonReadmission = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        dateReadmission = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        icuOutcome1 = new javax.swing.JComboBox();
+        hospitalOutcome = new javax.swing.JComboBox();
         jLabel19 = new javax.swing.JLabel();
-        hospitalDate = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         apache = new javax.swing.JTextField();
@@ -156,11 +149,9 @@ int dayCount = 0;
         jLabel35 = new javax.swing.JLabel();
         intubationAt = new javax.swing.JComboBox();
         jLabel36 = new javax.swing.JLabel();
-        apache5 = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         extubationTime = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
-        reIntubation = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         selfExtubation = new javax.swing.JComboBox();
         jLabel40 = new javax.swing.JLabel();
@@ -191,6 +182,15 @@ int dayCount = 0;
         total = new javax.swing.JTextField();
         jLabel53 = new javax.swing.JLabel();
         nextpage = new javax.swing.JLabel();
+        doaHospital = new org.jdesktop.swingx.JXDatePicker();
+        doaICU = new org.jdesktop.swingx.JXDatePicker();
+        dateSurgery = new org.jdesktop.swingx.JXDatePicker();
+        dateRedo = new org.jdesktop.swingx.JXDatePicker();
+        dateDischarge = new org.jdesktop.swingx.JXDatePicker();
+        dateReadmission = new org.jdesktop.swingx.JXDatePicker();
+        hospitalDate = new org.jdesktop.swingx.JXDatePicker();
+        dateExtubation = new org.jdesktop.swingx.JXDatePicker();
+        dateReintubation = new org.jdesktop.swingx.JXDatePicker();
         addpatient1 = new javax.swing.JPanel();
         exit4 = new javax.swing.JLabel();
         backpage = new javax.swing.JLabel();
@@ -582,7 +582,7 @@ int dayCount = 0;
         searchLayout.setHorizontalGroup(
             searchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchLayout.createSequentialGroup()
-                .addGap(0, 961, Short.MAX_VALUE)
+                .addGap(0, 968, Short.MAX_VALUE)
                 .addComponent(exit1))
         );
         searchLayout.setVerticalGroup(
@@ -608,7 +608,7 @@ int dayCount = 0;
         printreportLayout.setHorizontalGroup(
             printreportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printreportLayout.createSequentialGroup()
-                .addGap(0, 961, Short.MAX_VALUE)
+                .addGap(0, 968, Short.MAX_VALUE)
                 .addComponent(exit2))
         );
         printreportLayout.setVerticalGroup(
@@ -634,7 +634,7 @@ int dayCount = 0;
         calculatorLayout.setHorizontalGroup(
             calculatorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, calculatorLayout.createSequentialGroup()
-                .addGap(0, 961, Short.MAX_VALUE)
+                .addGap(0, 968, Short.MAX_VALUE)
                 .addComponent(exit3))
         );
         calculatorLayout.setVerticalGroup(
@@ -731,22 +731,22 @@ int dayCount = 0;
 
         jLabel23.setText("Comorbids");
 
-        Admittedtype.setModel(new javax.swing.AbstractListModel() {
+        jlistAdmittedtype.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Surgical Elect", "Surgical emergency", "Medical", "Trauma", "Ob Gyn", "Cardiac", "Neuro", "GS", "Pulmo", "Nephro", "Thoracic", "Ortho", "Plastic", "Maxsac" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        Admittedtype.setMaximumSize(new java.awt.Dimension(116, 240));
-        Admittedtype.setMinimumSize(new java.awt.Dimension(116, 240));
-        Admittedtype.setPreferredSize(new java.awt.Dimension(116, 240));
-        jScrollPane1.setViewportView(Admittedtype);
+        jlistAdmittedtype.setMaximumSize(new java.awt.Dimension(116, 240));
+        jlistAdmittedtype.setMinimumSize(new java.awt.Dimension(116, 240));
+        jlistAdmittedtype.setPreferredSize(new java.awt.Dimension(116, 240));
+        jScrollPane1.setViewportView(jlistAdmittedtype);
 
-        comorbids.setModel(new javax.swing.AbstractListModel() {
+        jlistComorbids.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "IDDM", "NIDDM", "COPD", "NYHA III-IV", "CRF", "CLD", "HIV", "Ca with mets", "Hematologic Malignancy", "Chemotherapy", "Radiotherapy", "ImnnunoSupression", "HTN", "Carcmoma", "Steroid Therapy" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane2.setViewportView(comorbids);
+        jScrollPane2.setViewportView(jlistComorbids);
 
         jLabel11.setText("Diagnosis");
 
@@ -758,9 +758,9 @@ int dayCount = 0;
         diagnosisSecondary.setRows(5);
         jScrollPane4.setViewportView(diagnosisSecondary);
 
-        diagnosisPrimary1.setColumns(20);
-        diagnosisPrimary1.setRows(5);
-        jScrollPane5.setViewportView(diagnosisPrimary1);
+        surgery.setColumns(20);
+        surgery.setRows(5);
+        jScrollPane5.setViewportView(surgery);
 
         jLabel12.setText("Surgery");
 
@@ -768,9 +768,9 @@ int dayCount = 0;
 
         jLabel14.setText("Redo");
 
-        diagnosisPrimary2.setColumns(20);
-        diagnosisPrimary2.setRows(5);
-        jScrollPane6.setViewportView(diagnosisPrimary2);
+        redoSurgery.setColumns(20);
+        redoSurgery.setRows(5);
+        jScrollPane6.setViewportView(redoSurgery);
 
         jLabel15.setText("Date");
 
@@ -781,9 +781,9 @@ int dayCount = 0;
 
         jLabel25.setText("Do ICU Discharge ");
 
-        dischargeDate1.addActionListener(new java.awt.event.ActionListener() {
+        los.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dischargeDate1ActionPerformed(evt);
+                losActionPerformed(evt);
             }
         });
 
@@ -791,8 +791,8 @@ int dayCount = 0;
 
         jLabel27.setText("Was Life sustaining therapy withdrawn");
 
-        sex1.setMaximumRowCount(2);
-        sex1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No" }));
+        lifeTherapy.setMaximumRowCount(2);
+        lifeTherapy.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yes", "No" }));
 
         jLabel16.setText("Reason");
 
@@ -800,16 +800,10 @@ int dayCount = 0;
 
         jLabel18.setText("Date");
 
-        dateReadmission.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateReadmissionActionPerformed(evt);
-            }
-        });
-
         jLabel28.setText("Hospital Outcome");
 
-        icuOutcome1.setMaximumRowCount(2);
-        icuOutcome1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Discharged Alive", "Death" }));
+        hospitalOutcome.setMaximumRowCount(2);
+        hospitalOutcome.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Discharged Alive", "Death" }));
 
         jLabel19.setText("Date");
 
@@ -930,20 +924,18 @@ int dayCount = 0;
                                             .addGroup(addpatientLayout.createSequentialGroup()
                                                 .addComponent(jLabel27)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(sex1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(lifeTherapy, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(addpatientLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(dischargeDate, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel26)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(dischargeDate1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(67, 67, 67))
-                                            .addGroup(addpatientLayout.createSequentialGroup()
+                                                .addComponent(dateDischarge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jLabel26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(los, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(addpatientLayout.createSequentialGroup()
                                                 .addComponent(reasonWithdrawn, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(0, 0, Short.MAX_VALUE))))
                                     .addGroup(addpatientLayout.createSequentialGroup()
@@ -965,13 +957,13 @@ int dayCount = 0;
                                             .addGroup(addpatientLayout.createSequentialGroup()
                                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addGroup(addpatientLayout.createSequentialGroup()
-                                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(dateSurgery, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(addpatientLayout.createSequentialGroup()
                                                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                        .addComponent(dateSurgery1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(dateRedo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addGroup(addpatientLayout.createSequentialGroup()
+                                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(dateSurgery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addGap(0, 0, Short.MAX_VALUE))))))
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -981,13 +973,13 @@ int dayCount = 0;
                                         .addComponent(hospitalNo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(10, 10, 10)
                                         .addComponent(jLabel2)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(doaHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(4, 4, 4)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(doaHospital, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel3)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(doaIcu, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(4, 4, 4)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(doaICU, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(timeAdmission, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1003,13 +995,13 @@ int dayCount = 0;
                                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(10, 10, 10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel9)
-                                        .addGap(21, 21, 21)
+                                        .addGap(27, 27, 27)
                                         .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1025,7 +1017,7 @@ int dayCount = 0;
                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addpatientLayout.createSequentialGroup()
+                                    .addGroup(addpatientLayout.createSequentialGroup()
                                         .addComponent(jLabel20)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel29)
@@ -1046,11 +1038,11 @@ int dayCount = 0;
                                     .addGroup(addpatientLayout.createSequentialGroup()
                                         .addComponent(jLabel17)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(reasonWithdrawn1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(reasonReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(dateReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(dateReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(addpatientLayout.createSequentialGroup()
@@ -1061,12 +1053,11 @@ int dayCount = 0;
                                         .addGap(15, 15, 15)))
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(nutRiskScore)
-                                    .addComponent(icuOutcome1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(hospitalOutcome, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hospitalDate, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8))
+                                .addComponent(hospitalDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addComponent(jLabel33)
                                 .addGap(24, 24, 24)
@@ -1077,21 +1068,21 @@ int dayCount = 0;
                                 .addComponent(intubationAt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(2, 2, 2)
                                 .addComponent(jLabel36)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(apache5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dateExtubation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel37)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(extubationTime, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel38)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(reIntubation, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dateReintubation, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel39)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(selfExtubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51))
+                                .addGap(16, 16, 16))
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(addpatientLayout.createSequentialGroup()
@@ -1172,17 +1163,10 @@ int dayCount = 0;
                         .addGap(31, 31, 31)
                         .addComponent(hospitalNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(addpatientLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel2))
-                    .addGroup(addpatientLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(doaHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(addpatientLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel3))
-                    .addGroup(addpatientLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(doaIcu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(doaICU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(addpatientLayout.createSequentialGroup()
                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(nextpage, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -1194,22 +1178,25 @@ int dayCount = 0;
                             .addComponent(jLabel5)
                             .addComponent(code, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
-                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(26, 26, 26)
-                .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7))
-                    .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel9)
-                        .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel10)
-                        .addComponent(bmi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel21)
-                        .addComponent(admittedFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)))
-                .addGap(12, 12, 12)
+                            .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(addpatientLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(doaHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(sex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(height, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(bmi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)
+                    .addComponent(admittedFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addpatientLayout.createSequentialGroup()
                         .addComponent(jLabel22)
@@ -1226,9 +1213,9 @@ int dayCount = 0;
                                 .addComponent(jLabel11))
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(addpatientLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
@@ -1237,7 +1224,7 @@ int dayCount = 0;
                                 .addGap(17, 17, 17)
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(addpatientLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
+                                .addGap(34, 34, 34)
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel13)
                                     .addComponent(dateSurgery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1249,33 +1236,33 @@ int dayCount = 0;
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(addpatientLayout.createSequentialGroup()
-                                .addGap(38, 38, 38)
+                                .addGap(37, 37, 37)
                                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel15)
-                                    .addComponent(dateSurgery1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(10, 10, 10)
+                                    .addComponent(dateRedo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(9, 9, 9)
                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel24)
                             .addComponent(icuOutcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel25)
-                            .addComponent(dischargeDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel26)
-                            .addComponent(dischargeDate1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(los, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dateDischarge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
-                            .addComponent(sex1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lifeTherapy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16)
                             .addComponent(reasonWithdrawn, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
-                    .addComponent(reasonWithdrawn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(reasonReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18)
-                    .addComponent(dateReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel28)
-                    .addComponent(icuOutcome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hospitalOutcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19)
+                    .addComponent(dateReadmission, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hospitalDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1297,13 +1284,13 @@ int dayCount = 0;
                     .addComponent(jLabel35)
                     .addComponent(intubationAt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36)
-                    .addComponent(apache5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel37)
                     .addComponent(extubationTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38)
-                    .addComponent(reIntubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39)
-                    .addComponent(selfExtubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selfExtubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateExtubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateReintubation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(addpatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
@@ -2465,7 +2452,7 @@ int dayCount = 0;
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelhco11)
                     .addComponent(steriodsld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jScrollPane8.setViewportView(jPanel8);
@@ -2477,7 +2464,7 @@ int dayCount = 0;
             .addGroup(addpatient1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 333, Short.MAX_VALUE)
                 .addGroup(addpatient1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addpatient1Layout.createSequentialGroup()
                         .addComponent(backpage)
@@ -2528,7 +2515,7 @@ int dayCount = 0;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 986, Short.MAX_VALUE))
+                .addComponent(mainpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 993, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2651,24 +2638,20 @@ int dayCount = 0;
         // TODO add your handling code here:
     }//GEN-LAST:event_bmiActionPerformed
 
-    private void dischargeDate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dischargeDate1ActionPerformed
+    private void losActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_losActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dischargeDate1ActionPerformed
+    }//GEN-LAST:event_losActionPerformed
 
     private void sofaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sofaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sofaActionPerformed
-
-    private void dateReadmissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateReadmissionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dateReadmissionActionPerformed
 
     private void intubationAtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intubationAtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_intubationAtActionPerformed
 
     private void totalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_totalMouseClicked
-    // TODO add your handling code here:
+    // calculating total value:
         int evalue = Integer.valueOf(e.getText());
         int mvalue = Integer.valueOf(m.getText());
         int bvalue = Integer.valueOf(b.getText());
@@ -2677,27 +2660,50 @@ int dayCount = 0;
     }//GEN-LAST:event_totalMouseClicked
 
     private void nextpageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextpageMouseClicked
-        // TODO add your handling code here:
         
+        //inserting patient info to patient Table
         conn = ICUsystem.getconnection();
-        String sql = "Insert into paitentinfo(hospno) values(?)";
+        java.sql.Date doaInHosp,doaInIcu,surgerydate,redodate,dodischarge,readmissionDate,DOD,extubation,reintubation;
+        doaInHosp = new java.sql.Date(doaHospital.getDate().getTime());
+        doaInIcu = new java.sql.Date(doaICU.getDate().getTime());
+        surgerydate = new java.sql.Date(dateSurgery.getDate().getTime());
+        redodate = new java.sql.Date(dateRedo.getDate().getTime());
+        dodischarge = new java.sql.Date(dateDischarge.getDate().getTime());
+        readmissionDate = new java.sql.Date(dateReadmission.getDate().getTime());
+        DOD = new java.sql.Date(hospitalDate.getDate().getTime());
+        extubation = new java.sql.Date(dateExtubation.getDate().getTime());
+        reintubation = new java.sql.Date(dateReintubation.getDate().getTime());
+        
         try{
-            pst  = conn.prepareStatement(sql);
-            pst.setString(1,hospitalNo.getText());
-            pst.execute();
+            //String sql = "Insert into patientinfo(hospno,doaInHosp,doaInIcu,time,code,age,sex,weight,height,bmi,admittedfrom,LOS,pdiagnosis,sdiagnosis,surgery,surgerydate,redodate,ICUoutcome,dodischarge,redo,lifeSustainingTherapyWithdrawn,reason,reasonofreadmission,readmissionDate,hospOutcome,DOD,ApacheII,SAPS,SOFA,qSOFA,nutritionriskscore,airwaytype,intubationat,extubation,extubationtime,reintubation,selfextubation,ventilationdays,vap,cvpdays,clabsi,complications,pcauseofdeath,Brainscan,repeatscan,Escore,Mscore,Bscore,Rscore,totalscore) values('"+hospitalNo.getText()+"','"+doaInHosp+"','"+doaInIcu+"','"+timeAdmission.getText()+"','"+code.getSelectedItem().toString()+"','"+Integer.parseInt(age.getText())+"','"+sex.getSelectedItem().toString()+"','"+Double.parseDouble(weight.getText())+"','"+Double.parseDouble(height.getText())+"','"+Double.parseDouble(bmi.getText())+"','"+admittedFrom.getSelectedItem().toString()+"','"+Integer.parseInt(los.getText())+"','"+diagnosisPrimary.getText()+"','"+diagnosisSecondary.getText()+"','"+surgery.getText()+"','"+surgerydate+"','"+redodate+"','"+icuOutcome.getSelectedItem().toString()+"','"+dodischarge+"','"+redoSurgery.getText()+"','"+lifeTherapy.getSelectedItem().toString()+"','"+reasonWithdrawn.getText()+"','"+reasonReadmission.getText()+"','"+readmissionDate+"','"+hospitalOutcome.getSelectedItem().toString()+"','"+DOD+"','"+Integer.parseInt(apache.getText())+"','"+Integer.parseInt(saps.getText())+"','"+Integer.parseInt(sofa.getText())+"','"+Integer.parseInt(qSofa.getText())+"','"+Integer.parseInt(nutRiskScore.getText())+"','"+airwayType.getSelectedItem().toString()+"','"+intubationAt.getSelectedItem().toString()+"','"+extubation+"','"+extubationTime.getText()+"','"+reintubation+"','"+selfExtubation.getSelectedItem().toString()+"','"+Integer.parseInt(ventilationDays.getText())+"','"+vap.getSelectedItem().toString()+"','"+cvpDays.getText()+"','"+clabsi.getSelectedItem().toString()+"','"+complication.getText()+"','"+reasonOfDeath.getText()+"','"+brainScan.getText()+"','"+repeatBrainScan.getText()+"','"+Integer.parseInt(e.getText())+"','"+Integer.parseInt(m.getText())+"','"+Integer.parseInt(b.getText())+"','"+Integer.parseInt(r.getText())+"','"+Integer.parseInt(total.getText())+"')";
+            //pst  = conn.prepareStatement(sql);
+            //pst.execute();
+            Object obj[] = (java.util.Objects[]) jlistAdmittedtype.getSelectedValue();
+            for(int i=0;i<obj.length;i++){
+            String option = obj.toString();
+            System.out.println(option);
+            //String sql1 = "Insert into patient_admission_type(hosp_no,patient_admission_type_id) values('"+hospitalNo.getText()+"','"+option+"')";
+            //pst1 = conn.prepareStatement(sql1);
+            //pst1.execute();
+            }
+             
+            
+            //moving to new page
+            //Remove panels
+            mainpanel.removeAll();
+            mainpanel.repaint();
+            mainpanel.revalidate();
+            //Add panels
+            mainpanel.add(addpatient1);
+            mainpanel.repaint();
+            mainpanel.revalidate();
         }
         catch(Exception e)
         {
             JOptionPane.showMessageDialog(null, e);   
         }
-         //Remove panels
-        mainpanel.removeAll();
-        mainpanel.repaint();
-        mainpanel.revalidate();
-        //Add panels
-        mainpanel.add(addpatient1);
-        mainpanel.repaint();
-        mainpanel.revalidate();
+        
+        
         
     }//GEN-LAST:event_nextpageMouseClicked
 
@@ -3152,7 +3158,6 @@ int dayCount = 0;
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList Admittedtype;
     private javax.swing.JButton Insert;
     private javax.swing.JTextField aLine;
     private javax.swing.JLabel addPatient;
@@ -3169,7 +3174,6 @@ int dayCount = 0;
     private javax.swing.JTextField alt;
     private javax.swing.JTextField amylase;
     private javax.swing.JTextField apache;
-    private javax.swing.JTextField apache5;
     private javax.swing.JTextField ast;
     private javax.swing.JTextField b;
     private javax.swing.JLabel backpage;
@@ -3190,7 +3194,6 @@ int dayCount = 0;
     private javax.swing.JTextField cl;
     private javax.swing.JComboBox clabsi;
     private javax.swing.JComboBox code;
-    private javax.swing.JList comorbids;
     private javax.swing.JTextField complication;
     private javax.swing.JTextField cpk;
     private javax.swing.JTextField creatinine;
@@ -3198,23 +3201,22 @@ int dayCount = 0;
     private javax.swing.JTextField cvpDays;
     private javax.swing.JTextField cvpMax;
     private javax.swing.JTextField cvpMin;
-    private javax.swing.JTextField dateReadmission;
-    private javax.swing.JTextField dateSurgery;
-    private javax.swing.JTextField dateSurgery1;
+    private org.jdesktop.swingx.JXDatePicker dateDischarge;
+    private org.jdesktop.swingx.JXDatePicker dateExtubation;
+    private org.jdesktop.swingx.JXDatePicker dateReadmission;
+    private org.jdesktop.swingx.JXDatePicker dateRedo;
+    private org.jdesktop.swingx.JXDatePicker dateReintubation;
+    private org.jdesktop.swingx.JXDatePicker dateSurgery;
     private javax.swing.JLabel day;
     private javax.swing.JTextField days;
     private javax.swing.JTextField dbp;
     private javax.swing.JTextField ddimer;
     private javax.swing.JComboBox delirium;
     private javax.swing.JTextArea diagnosisPrimary;
-    private javax.swing.JTextArea diagnosisPrimary1;
-    private javax.swing.JTextArea diagnosisPrimary2;
     private javax.swing.JTextArea diagnosisSecondary;
     private javax.swing.JComboBox dialysis;
-    private javax.swing.JTextField dischargeDate;
-    private javax.swing.JTextField dischargeDate1;
-    private javax.swing.JTextField doaHospital;
-    private javax.swing.JTextField doaIcu;
+    private org.jdesktop.swingx.JXDatePicker doaHospital;
+    private org.jdesktop.swingx.JXDatePicker doaICU;
     private javax.swing.JComboBox dobutamine;
     private javax.swing.JComboBox dopamine;
     private javax.swing.JTextField dopplr;
@@ -3236,11 +3238,11 @@ int dayCount = 0;
     private javax.swing.JTextField hco3;
     private javax.swing.JTextField hct;
     private javax.swing.JTextField height;
-    private javax.swing.JTextField hospitalDate;
+    private org.jdesktop.swingx.JXDatePicker hospitalDate;
     private javax.swing.JTextField hospitalNo;
+    private javax.swing.JComboBox hospitalOutcome;
     private javax.swing.JTextField hr;
     private javax.swing.JComboBox icuOutcome;
-    private javax.swing.JComboBox icuOutcome1;
     private javax.swing.JPanel ind_1;
     private javax.swing.JPanel ind_2;
     private javax.swing.JPanel ind_3;
@@ -3384,10 +3386,14 @@ int dayCount = 0;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JList jlistAdmittedtype;
+    private javax.swing.JList jlistComorbids;
     private javax.swing.JTextField k;
     private javax.swing.JTextField lactate;
     private javax.swing.JTextField ldh;
+    private javax.swing.JComboBox lifeTherapy;
     private javax.swing.JTextField lipase;
+    private javax.swing.JTextField los;
     private javax.swing.JTextField m;
     private javax.swing.JPanel mainpanel;
     private javax.swing.JTextField map;
@@ -3409,10 +3415,10 @@ int dayCount = 0;
     private javax.swing.JTextField qSofa;
     private javax.swing.JTextField r;
     private javax.swing.JTextField rass;
-    private javax.swing.JTextField reIntubation;
     private javax.swing.JTextField reasonOfDeath;
+    private javax.swing.JTextField reasonReadmission;
     private javax.swing.JTextField reasonWithdrawn;
-    private javax.swing.JTextField reasonWithdrawn1;
+    private javax.swing.JTextArea redoSurgery;
     private javax.swing.JTextField repeatBrainScan;
     private javax.swing.JComboBox route;
     private javax.swing.JTextField rr;
@@ -3421,10 +3427,10 @@ int dayCount = 0;
     private javax.swing.JPanel search;
     private javax.swing.JComboBox selfExtubation;
     private javax.swing.JComboBox sex;
-    private javax.swing.JComboBox sex1;
     private javax.swing.JPanel sidebar;
     private javax.swing.JTextField sofa;
     private javax.swing.JComboBox steriodsld;
+    private javax.swing.JTextArea surgery;
     private javax.swing.JTextField temp;
     private javax.swing.JTextField timeAdmission;
     private javax.swing.JTextField total;

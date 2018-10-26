@@ -57,7 +57,7 @@
           <Group type="102" alignment="1" attributes="0">
               <Component id="sidebar" min="-2" pref="141" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="mainpanel" pref="986" max="32767" attributes="0"/>
+              <Component id="mainpanel" pref="993" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -417,7 +417,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="961" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="968" max="32767" attributes="0"/>
                       <Component id="exit1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -460,7 +460,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="961" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="968" max="32767" attributes="0"/>
                       <Component id="exit2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -503,7 +503,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="961" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="968" max="32767" attributes="0"/>
                       <Component id="exit3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -580,27 +580,23 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="sex1" min="-2" pref="58" max="-2" attributes="0"/>
+                                                      <Component id="lifeTherapy" min="-2" pref="58" max="-2" attributes="0"/>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Component id="jLabel16" min="-2" pref="47" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="dischargeDate" min="-2" pref="104" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="dischargeDate1" min="-2" pref="104" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="dateDischarge" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="reasonWithdrawn" min="-2" pref="320" max="-2" attributes="0"/>
-                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="los" min="-2" pref="104" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="reasonWithdrawn" min="-2" pref="320" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -624,14 +620,14 @@
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" attributes="0">
-                                                              <Component id="jLabel13" min="-2" pref="32" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="dateSurgery" min="-2" pref="100" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
                                                               <Component id="jLabel15" min="-2" pref="32" max="-2" attributes="0"/>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="dateSurgery1" min="-2" pref="100" max="-2" attributes="0"/>
+                                                              <Component id="dateRedo" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Component id="jLabel13" min="-2" pref="32" max="-2" attributes="0"/>
+                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                              <Component id="dateSurgery" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -648,13 +644,13 @@
                                               <Component id="hospitalNo" min="-2" pref="100" max="-2" attributes="0"/>
                                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                              <Component id="doaHospital" min="-2" pref="100" max="-2" attributes="0"/>
-                                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                              <Component id="doaHospital" min="-2" pref="102" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                              <Component id="doaIcu" min="-2" pref="100" max="-2" attributes="0"/>
-                                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                              <Component id="doaICU" min="-2" pref="102" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="timeAdmission" min="-2" pref="100" max="-2" attributes="0"/>
@@ -671,13 +667,13 @@
                                               <Component id="jLabel7" min="-2" pref="48" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="sex" min="-2" pref="100" max="-2" attributes="0"/>
-                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                              <Component id="jLabel8" min="-2" pref="74" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="jLabel8" min="-2" pref="74" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
                                               <Component id="weight" min="-2" pref="100" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="height" min="-2" pref="100" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel10" min="-2" pref="22" max="-2" attributes="0"/>
@@ -698,7 +694,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
                                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
@@ -720,11 +716,11 @@
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="reasonWithdrawn1" min="-2" pref="329" max="-2" attributes="0"/>
+                                              <Component id="reasonReadmission" min="-2" pref="329" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jLabel18" min="-2" pref="33" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="dateReadmission" min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Component id="dateReadmission" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -740,13 +736,12 @@
                                       </Group>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="nutRiskScore" max="32767" attributes="0"/>
-                                          <Component id="icuOutcome1" max="32767" attributes="0"/>
+                                          <Component id="hospitalOutcome" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel19" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="hospitalDate" min="-2" pref="98" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                      <Component id="hospitalDate" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
@@ -758,21 +753,21 @@
                                       <Component id="intubationAt" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel36" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="apache5" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="dateExtubation" max="32767" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="extubationTime" min="-2" pref="84" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="reIntubation" min="-2" pref="104" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="dateReintubation" min="-2" pref="133" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="selfExtubation" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
@@ -871,20 +866,11 @@
                               <Component id="hospitalNo" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="doaHospital" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Component id="doaIcu" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="doaICU" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -901,25 +887,28 @@
                                   <Component id="age" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="sex" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="weight" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="height" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="bmi" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="admittedFrom" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="doaHospital" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sex" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="weight" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="height" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bmi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="admittedFrom" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
@@ -939,9 +928,9 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jScrollPane4" min="-2" pref="62" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane3" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jScrollPane3" pref="65" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -955,7 +944,7 @@
                                       <Component id="jScrollPane5" min="-2" pref="65" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="dateSurgery" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -972,40 +961,40 @@
                                       <Component id="jScrollPane6" min="-2" pref="65" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="dateSurgery1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dateRedo" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="icuOutcome" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dischargeDate" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="dischargeDate1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="los" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dateDischarge" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sex1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lifeTherapy" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="reasonWithdrawn" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="44" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="reasonWithdrawn1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="reasonReadmission" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dateReadmission" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="icuOutcome1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hospitalOutcome" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dateReadmission" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="hospitalDate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1029,13 +1018,13 @@
                           <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="intubationAt" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="apache5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="extubationTime" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="reIntubation" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="selfExtubation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dateExtubation" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dateReintubation" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1099,14 +1088,10 @@
             </Component>
             <Component class="javax.swing.JTextField" name="hospitalNo">
             </Component>
-            <Component class="javax.swing.JTextField" name="doaHospital">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="DOA in Hospital"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="doaIcu">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -1244,7 +1229,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="Admittedtype">
+                <Component class="javax.swing.JList" name="jlistAdmittedtype">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="14">
@@ -1284,7 +1269,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="comorbids">
+                <Component class="javax.swing.JList" name="jlistComorbids">
                   <Properties>
                     <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                       <StringArray count="15">
@@ -1351,7 +1336,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="diagnosisPrimary1">
+                <Component class="javax.swing.JTextArea" name="surgery">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1369,8 +1354,6 @@
                 <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="dateSurgery">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel14">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Redo"/>
@@ -1383,7 +1366,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="diagnosisPrimary2">
+                <Component class="javax.swing.JTextArea" name="redoSurgery">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1395,8 +1378,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="dateSurgery1">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel24">
               <Properties>
@@ -1424,11 +1405,9 @@
                 <Property name="text" type="java.lang.String" value="Do ICU Discharge "/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="dischargeDate">
-            </Component>
-            <Component class="javax.swing.JTextField" name="dischargeDate1">
+            <Component class="javax.swing.JTextField" name="los">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dischargeDate1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="losActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel26">
@@ -1441,7 +1420,7 @@
                 <Property name="text" type="java.lang.String" value="Was Life sustaining therapy withdrawn"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="sex1">
+            <Component class="javax.swing.JComboBox" name="lifeTherapy">
               <Properties>
                 <Property name="maximumRowCount" type="int" value="2"/>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -1464,24 +1443,19 @@
                 <Property name="text" type="java.lang.String" value="ICU ReAdmission Reason"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="reasonWithdrawn1">
+            <Component class="javax.swing.JTextField" name="reasonReadmission">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="dateReadmission">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dateReadmissionActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel28">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Hospital Outcome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="icuOutcome1">
+            <Component class="javax.swing.JComboBox" name="hospitalOutcome">
               <Properties>
                 <Property name="maximumRowCount" type="int" value="2"/>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -1496,8 +1470,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Date"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="hospitalDate">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
@@ -1587,8 +1559,6 @@
                 <Property name="text" type="java.lang.String" value="Extubation"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="apache5">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel37">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Time"/>
@@ -1600,8 +1570,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="ReIntubation"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="reIntubation">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
               <Properties>
@@ -1746,6 +1714,24 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="nextpageMouseClicked"/>
               </Events>
             </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="doaHospital">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="doaICU">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateSurgery">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateRedo">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateDischarge">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateReadmission">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="hospitalDate">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateExtubation">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="dateReintubation">
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="addpatient1">
@@ -1766,7 +1752,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="jScrollPane8" min="-2" pref="240" max="-2" attributes="0"/>
-                      <EmptySpace pref="326" max="32767" attributes="0"/>
+                      <EmptySpace pref="333" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="backpage" min="-2" max="-2" attributes="0"/>
@@ -2730,7 +2716,7 @@
                                   <Component id="jLabelhco11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="steriodsld" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="33" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
